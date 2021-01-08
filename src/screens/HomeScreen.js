@@ -15,15 +15,15 @@ function HomeScreen({ navigation }) {
       setResults(response.data);
   };
   return (
-    <SafeAreaView >
+    <SafeAreaView style={styles.container} >
     <FlatList
    
        data={result}
        keyExtractor={item => item.id.toString()}
        renderItem={({item})=>(
          
-           <View >
-             <Text >{item.title}</Text>
+           <View style={styles.box}>
+             <Text style={styles.text}>{item.title}</Text>
              <Text>{item.body}</Text>
            </View>
 

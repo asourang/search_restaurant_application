@@ -18,9 +18,9 @@ export const styles = StyleSheet.create({
     },
 
     box:{
-      borderWidth:3,
+    borderWidth:3,
     borderColor:'black',
-    borderRadius: 25,
+    
     margin: 10,
     padding:15,
 
