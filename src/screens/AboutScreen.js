@@ -1,14 +1,10 @@
-import React from "react";
-import { View , Text, StyleSheet, Button } from "react-native";
-import {styles} from "./myStyle";
-function AboutScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-       // onPress={() => navigation.navigate('Login')}
-        title="About Us"
-      />
-    </View>
-  );
+
+import React, { Component } from 'react'
+import WebView from 'react-native-webview'
+
+export default class AboutScreen extends Component {
+  render() {
+    return <WebView source={{ uri: 'https://blog.jscrambler.com' }} style={{ marginTop: 20 }} />
+  }
 }
-export default AboutScreen;
+
