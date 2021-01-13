@@ -18,7 +18,7 @@ import ApiManager from '../../api/ApiManager';
       setResults(response.data);
   };
 
-
+  
   
   return (
     
@@ -38,7 +38,7 @@ import ApiManager from '../../api/ApiManager';
       </TouchableOpacity>
       </View>
       
-      <View><TouchableOpacity   oonPress={() => navigation.navigate('Order')}
+      <View><TouchableOpacity   onPress={() => navigation.navigate('Order')}
         title="Order!" style={styles.newOrder1}>
         <Text >Start New Order</Text>
       </TouchableOpacity>
