@@ -1,21 +1,10 @@
-import React from "react";
+import React, { Component } from 'react'
 import { View, StyleSheet, Text } from "react-native";
-
-const PrivacyScreen = () => {
-  return (
-    <View style={styles.center}>
-      <Text>This is the about screen</Text>
-    </View>
-  );
-};
-
-const styles = StyleSheet.create({
-  center: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  },
-});
+import WebView from 'react-native-webview'
+class PrivacyScreen extends Component {
+  render() {
+    return <WebView source={{ uri: 'https://blog.jscrambler.com/how-to-use-webviews-in-a-react-native-app/' }} style={{ marginTop: 20 }} />
+  }
+}
 
 export default PrivacyScreen;

@@ -13,8 +13,9 @@ import {
 import filter from 'lodash.filter';
 
 
-function SearchScreen({navigation}) {
-
+function FeedbackLocation({navigation,route}) {
+    const {what}=route.params;
+    const {why}=route.params;
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -114,7 +115,7 @@ const contains = ({ name, email }, query) => {
         renderItem={({ item }) => (
           
           <View style={styles.listItem}>
-           <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
+           <TouchableOpacity onPress={() => navigation.navigate('SpecificFeedbackScreen',{what:what,why:why})}>
               <Image
               source={{ uri: item.picture.thumbnail }}
               style={styles.coverImage}
@@ -131,7 +132,7 @@ const contains = ({ name, email }, query) => {
   );
 }
 
-export default SearchScreen;
+export default FeedbackLocation;
 
 const styles = StyleSheet.create({
   container: {

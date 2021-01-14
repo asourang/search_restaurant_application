@@ -32,7 +32,7 @@ import ApiManager from '../../api/ApiManager';
               source={require('../../assets/home.png')}
               
             />
-      <View><TouchableOpacity  onPress={() => navigation.navigate('Search')}
+      <View><TouchableOpacity  onPress={() => navigation.navigate('Order')}
         title="Search!" style={styles.homeOrder}>
         <Text style={styles.loginText}>Restaurants</Text>
       </TouchableOpacity>

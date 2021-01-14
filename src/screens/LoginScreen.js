@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import {styles} from "./myStyle";
 import {
   StyleSheet,
   Text,
@@ -7,8 +8,9 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import {LoginStackNavigator }from "./Stack";
  
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
@@ -17,49 +19,44 @@ export default function LoginScreen() {
      
       <StatusBar style="auto" />
      
-      <Text style={styles2.Login}>Login</Text>
-      <View style={styles2.inputView}>
+      <View style={styles.generalInput}>
   
-        <TextInput
-          style={styles2.TextInput}
-          placeholder="Email."
-          placeholderTextColor="#003f5c"
-          onChangeText={(email) => setEmail(email)}
-        />
-      </View>
- 
-      <View style={styles2.inputView}>
-        <TextInput
-          style={styles2.TextInput}
-          placeholder="Password."
-          placeholderTextColor="#003f5c"
-          secureTextEntry={true}
-          onChangeText={(password) => setPassword(password)}
-        />
-      </View>
- 
-      <TouchableOpacity>
-        <Text style={styles2.forgot_button}>Forgot Password?</Text>
-      </TouchableOpacity>
- 
-      <TouchableOpacity style={styles2.loginBtn}>
+  <TextInput
+    style={styles2.TextInput}
+    placeholder="Eamil"
+    placeholderTextColor="#003f5c"
+    
+  />
+
+</View>   
+
+<View style={styles.generalInput}>
+  
+  <TextInput
+    style={styles2.TextInput}
+    placeholder="Password"
+    placeholderTextColor="#003f5c"
+    
+  />
+
+</View> 
+      <TouchableOpacity style={styles2.loginBtn} onPress={() => navigation.navigate('Home' )}>
         <Text style={styles2.loginText}>LOGIN</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.orderType}>
+        <Text style={styles2.forgot_button}>Create Account</Text>
+        <Text style={styles2.forgot_button}>                                        </Text>
+        <Text style={styles2.forgot_button}>Forgot Password?</Text>
+      </TouchableOpacity>
+
     </View>
+
+    
   );
 }
  
 const styles2 = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-   
-    borderColor:"#ff8c00",
-  
-    
-  },
+
  
   image: {
     marginBottom: 40,
@@ -84,7 +81,8 @@ const styles2 = StyleSheet.create({
  
   forgot_button: {
     height: 30,
-    marginBottom: 30,
+    marginBottom: 10,
+  
   },
  
   Login: {
@@ -106,12 +104,12 @@ const styles2 = StyleSheet.create({
   },
 
   loginBtn: {
-    width: "50%",
-    borderRadius: 25,
+    width: "95%",
+    alignSelf:'center',
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 20,
     backgroundColor: "#ff8c00",
   },
 

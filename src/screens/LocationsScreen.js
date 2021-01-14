@@ -1,8 +1,5 @@
 import MapView from 'react-native-maps'
 import React, { Component } from 'react'
-import { View , Text, StyleSheet, Button } from "react-native";
-import {styles} from "./myStyle";
-
 
 export default class LocationsScreen  extends Component { 
    render() {    return (      <MapView        style={{flex: 1}}  

@@ -17,6 +17,13 @@ export const styles = StyleSheet.create({
       justifyContent: 'center',
   
     },
+    container2: {
+      flex: 1,
+ 
+      alignItems: 'center',
+      justifyContent: 'center',
+  
+    },
     text: {
       fontSize: 20,
       fontWeight: 'bold',
@@ -98,11 +105,54 @@ export const styles = StyleSheet.create({
        width:450,
       
      },
+     generalSubmit: {
+      paddingLeft:200,
+      borderWidth:1,
+      borderColor:'white',
+       padding:25,
+      backgroundColor:"orange",
+       fontFamily:"Palatino",
+       fontSize: 30,
+       color:"white",
+       fontWeight: 'bold',
+       marginTop:150,
+     
+      
+       width:450,
+      
+     },
      orderType: {
       flexDirection:'row',
       borderWidth:1,
       borderColor:'white',
        padding:25,
+       fontFamily:"Palatino",
+       fontSize: 30,
+       color:"white",
+       fontWeight: 'bold',
+       width:420,
+      
+     },
+
+     generalInput: {
+      flexDirection:'row',
+      borderWidth:1,
+      borderColor:'white',
+      borderBottomColor:'black',
+       padding:2,
+       fontFamily:"Palatino",
+       fontSize: 30,
+       color:"white",
+       fontWeight: 'bold',
+       width:420,
+      
+     },
+     commentsInput: {
+      flexDirection:'row',
+      borderWidth:1,
+      borderColor:'white',
+      padding:20,
+       paddingBottom:100,
        fontFamily:"Palatino",
        fontSize: 30,
        color:"white",
